@@ -7,18 +7,18 @@ import {BsFillMoonStarsFill} from 'react-icons/bs'
 import { BsFillSunFill } from 'react-icons/bs';
 import { BsSun } from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-icons/ai'
-import rishi from '../../public/rishi.png'
-import c from '../../public/c.png'
-import php from '../../public/php.png'
-import js from '../../public/js.png'
-import python from '../../public/python.png'
-import mongodb from '../../public/mongodb.png'
-import typescript from '../../public/typescript.png'
-import mysql from '../../public/mysql.png'
-import java from '../../public/java.png'
-import aws from '../../public/aws.png'
-import platformer from '../../public/platformer.png'
-import gamereview from "../../public/Gamereview.png"
+import rishi from '/nextjs-github-pages/rishi.png'
+import c from '/nextjs-github-pages/c.png'
+import php from '/nextjs-github-pages/php.png'
+import js from '/nextjs-github-pages/js.png'
+import python from '/nextjs-github-pages/python.png'
+import mongodb from '/nextjs-github-pages/mongodb.png'
+import typescript from '/nextjs-github-pages/typescript.png'
+import mysql from '/nextjs-github-pages/mysql.png'
+import java from '/nextjs-github-pages/java.png'
+import aws from '/nextjs-github-pages/aws.png'
+import platformer from '/nextjs-github-pages/platformer.png'
+import gamereview from "/nextjs-github-pages/Gamereview.png"
 import { Carousel } from 'flowbite-react';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
