@@ -1,3 +1,19 @@
 {
-    "intro" : "I am a Solution Analyst at Deloitte. I am very eager to learn new things and have interests in Machine Learning. I am well-focused, self-reliant, and have good communication skills."
+    "intro": "I am a Solution Analyst at Deloitte. I am very eager to learn new things and have interests in Machine Learning. I am well-focused, self-reliant, and have good communication skills.",
+    "nav": {
+        "developedBy": "Developed by Rishi Gadhia"
+    },
+    "hero": {
+        "name": "Rishi Gadhia"
+    },
+    "about": {
+        "title": "About Me"
+    },
+    "projects": {
+        "title": "Projects",
+        "gameReview": "Game Review",
+        "platformer": "2D Platformer",
+        "viewAll": "View All On GitHub",
+        "github": "GitHub"
+    }
 }
