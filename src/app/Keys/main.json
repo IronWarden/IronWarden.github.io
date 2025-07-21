@@ -1,5 +1,5 @@
 {
-    "intro": "I am a Solution Analyst at Deloitte. I am very eager to learn new things and have interests in Machine Learning. I am well-focused, self-reliant, and have good communication skills.",
+    "intro": "I work full-time as a Solution Analyst at Deloitte, modernizing outdated systems to allow our clients to better fulfill their needs. Aside from that, I spend a considerable amount of my spare time challenging myself with new technologies and expanding my skillset. I enjoy solving difficult problems and strive to make an impact on the world around me.", 
     "nav": {
         "developedBy": "Developed by Rishi Gadhia"
     },
@@ -12,8 +12,22 @@
     "projects": {
         "title": "Projects",
         "gameReview": "Game Review",
-        "platformer": "2D Platformer",
+        "gameReviewDesc" : "A group project on creating a web application where users can sign up and review video games. I contributed by writing REST APIs and integrating external APIs to extend the functionality of the application",
+        "sobel": "Parallelized Sobel Edge Detection",
+        "sobelDesc" : "A group research project on parellizing edge detection algorithms. Contributed by writing prototypes and researching methods to parallelize the Sobel edge detection algorithm.",
+        "backtester": "Backtesting Engine",
+        "backtesterDesc": "An ongoing project on creating a TUI backtesting engine for trading and investing. I am currently learning Go and have built a prototype of a backtesting engine.",
         "viewAll": "View All On GitHub",
         "github": "GitHub"
+    },
+    "skills": {
+        "title": "Skills",
+        "javascript" : "As my primary language at work, I'm very comfortable with JavaScript and have built multiple projects with it.",
+        "python": "I enjoy using Python for rapid prototyping, studying data structures, and handling various data pre-processing tasks.",
+        "linux" : "I have ~1.5 years of linux experience on server and desktop, I am quite comfortable with the Linux ecosystem and find it enjoyable.",
+        "go" : "I'm currently learning Go by building a backtesting engine and find it to be a very enjoyable and efficient language.",
+        "react" : "I have built projects with both React and React Native and use it frequently in my professional work for UI development.",
+        "databases" : "I have experience working with both SQL and NoSQL databases and have used both types in various personal projects."
     }
+
 }
