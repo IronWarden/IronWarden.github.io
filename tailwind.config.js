@@ -8,7 +8,6 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                burton: 'burtons',
                 hack: 'Hack',
             },
             backgroundImage: {
@@ -21,8 +20,6 @@ module.exports = {
     plugins: [require('daisyui')],
     daisyui: {
         themes: [
-            'lemonade',
-            'dim',
             {
                 solarized_dark: {
                     "primary": "#268bd2",

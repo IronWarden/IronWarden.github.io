@@ -10,7 +10,7 @@ const SkillLevel = ({ level }) => {
             {Array.from({ length: totalCircles }).map((_, index) => (
                 <div
                     key={index}
-                    className={`h-4 w-4 rounded-full mx-1 ${index < filledCircles ? 'bg-primary' : 'bg-base-300'
+                    className={`h-4 w-4 rounded-full mx-1 ${index < filledCircles ? 'bg-primary' : 'bg-base-content'
                         }`}
                 ></div>
             ))}
@@ -60,17 +60,17 @@ const Skills = () => {
 
     return (
         <section className="py-12">
-            <div className="container mx-auto">
-                <h2 className="text-4xl text-center text-primary font-burton mb-8">{keys.skills.title}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-secondary mb-8">{keys.skills.title}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     {skillsData.map((skill, index) => (
                         <div key={index} className="card bg-base-200 shadow-xl">
                             <div className="card-body">
                                 <div className="flex items-center mb-4">
                                     <i className={`${skill.icon} text-4xl mr-4`}></i>
-                                    <h3 className="card-title">{skill.title}</h3>
+                                    <h3 className="card-title text-sm md:text-lg xl:text-xl">{skill.title}</h3>
                                 </div>
-                                <p>{skill.description}</p>
+                                <p className='text-sm md:text-lg xl:text-xl'>{skill.description}</p>
                                 <div className="mt-4">
                                     <SkillLevel level={skill.level} />
                                 </div>

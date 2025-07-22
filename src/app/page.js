@@ -1,60 +1,37 @@
 'use client';
 
 import Image from 'next/image';
-import { BsFillMoonStarsFill, BsSun } from 'react-icons/bs';
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai';
-import rishi from '../../public/rishi.png';
-// import GitHubCalendar from 'react-github-calendar';
-// import platformer from '../../public/platformer.png';
-// import gamereview from '../../public/Gamereview.png';
-import React, { useState, useEffect } from 'react';
+import rishi from '../../public/rishi.JPG';
+import React from 'react';
 import keys from '@/app/Keys/main.json';
 import Skills from '@/app/components/Skills.js';
 import Projects from '@/app/components/Projects.js';
 
 export default function Home() {
-    const [darkMode, setDarkMode] = useState(false);
-
-    useEffect(() => {
-        const theme = darkMode ? 'solarized_dark' : 'solarized_light';
-        document.documentElement.setAttribute('data-theme', theme);
-    }, [darkMode]);
-
     return (
-        <main className="bg-base-100 text-base-content px-10 md:px-20 lg:px-40 max-w-7xl mx-auto">
+        <main className="bg-base-100 text-base-content">
             <section>
-                <nav className="py-10 mb-8 flex justify-end">
-                    <label className="swap swap-rotate">
-                        <input
-                            type="checkbox"
-                            className="hidden"
-                            checked={darkMode}
-                            onChange={() => setDarkMode(!darkMode)}
-                        />
-                        <BsSun className="swap-on fill-current w-6 h-6 text-base-content" />
-                        <BsFillMoonStarsFill className="swap-off fill-current w-6 h-6 text-base-content" />
-                    </label>
-                </nav>
-                <div className="relative mx-auto bg-gradient-to-b from-primary to-secondary rounded-full mt-10 overflow-hidden md:h-60 md:w-60 h-40 w-40 filter grayscale">
-                    <Image src={rishi} layout="fill" objectFit="cover" />
+                <div className="relative mx-auto rounded-full mt-10 overflow-hidden md:h-80 md:w-80 h-40 w-40 ">
+                    <Image src={rishi} alt="Rishi Gadhia's profile picture" fill={true} className="object-cover" priority />
                 </div>
-                <div className="text-5xl flex justify-center gap-16 py-3 text-base-content">
-                    <a href="https://github.com/IronWarden" target="_blank">
+                <div className="text-3xl md:text-4xl lg:text-5xl flex justify-center gap-8 md:gap-12 lg:gap-16 py-3">
+                    <a href="https://github.com/IronWarden" target="_blank" className="p-2 rounded-full hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-current">
                         <AiFillGithub />
                     </a>
-                    <a href="https://www.linkedin.com/in/rishi-gadhia-296843285/" target="_blank">
+                    <a href="https://www.linkedin.com/in/rishi-gadhia-296843285/" target="_blank" className="p-2 rounded-full hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-current">
                         <AiFillLinkedin />
                     </a>
-                    <a href="mailto:gadhiarishi@gmail.com" target="_blank">
+                    <a href="mailto:gadhiarishi@gmail.com" target="_blank" className="p-2 rounded-full hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-current">
                         <AiFillMail />
                     </a>
                 </div>
             </section>
-            <section className="my-12 container max-w-screen-lg mx-auto">
-                <h2 className="text-4xl text-primary text-center font-burton">
+            <section className="my-12">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl text-secondary text-center">
                     {keys.hero.name}
                 </h2>
-                <p className="lg:text-xl sm:text-lg md:text-lg font-hack py-5 leading-8 text-base-content whitespace-normal overflow-ellipsis">{keys.intro}</p>
+                <p className="text-sm md:text-lg lg:text-xl font-hack py-5">{keys.intro}</p>
             </section>
             <Skills />
             <Projects />

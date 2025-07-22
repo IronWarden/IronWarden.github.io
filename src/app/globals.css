@@ -1,5 +1,37 @@
+@font-face {
+  font-family: 'Hack';
+  src: url('/ttf/Hack-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('/ttf/Hack-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('/ttf/Hack-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('/ttf/Hack-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@import url("https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css");

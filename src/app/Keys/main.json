@@ -1,5 +1,5 @@
 {
-    "intro": "I work full-time as a Solution Analyst at Deloitte, modernizing outdated systems to allow our clients to better fulfill their needs. Aside from that, I spend a considerable amount of my spare time challenging myself with new technologies and expanding my skillset. I enjoy solving difficult problems and strive to make an impact on the world around me.", 
+    "intro": "I work full-time as a Solution Analyst at Deloitte, modernizing legacy systems to optimize client operations. Aside from that, I spend a considerable amount of my spare time challenging myself with new technologies and expanding my skillset. I enjoy solving difficult problems and strive to make an impact on the world around me.", 
     "nav": {
         "developedBy": "Developed by Rishi Gadhia"
     },
@@ -10,13 +10,13 @@
         "title": "About Me"
     },
     "projects": {
-        "title": "Projects",
+        "title": "Personal Projects",
         "gameReview": "Game Review",
-        "gameReviewDesc" : "A group project on creating a web application where users can sign up and review video games. I contributed by writing REST APIs and integrating external APIs to extend the functionality of the application",
+        "gameReviewDesc" : "A group project in creating a platform that users can sign up and leave reviews for video games. We made both a web and native Android application. I contributed by designing and implementing REST APIs, and integrating external APIs to enhance the application's features.",
         "sobel": "Parallelized Sobel Edge Detection",
-        "sobelDesc" : "A group research project on parellizing edge detection algorithms. Contributed by writing prototypes and researching methods to parallelize the Sobel edge detection algorithm.",
+        "sobelDesc" : "I participated in a group research project on multithreading edge detection algorithms. I contributed by writing prototypes and researching methods to run the Sobel edge detection algorithm in parallel.",
         "backtester": "Backtesting Engine",
-        "backtesterDesc": "An ongoing project on creating a TUI backtesting engine for trading and investing. I am currently learning Go and have built a prototype of a backtesting engine.",
+        "backtesterDesc": "An ongoing project on creating a TUI backtesting engine for trading and investing. I have built a prototype of a backtesting engine in Go, and created a duckDB database to store various asset data a user might want to backtest. Currently, I am extending the strategies that a user can run.",
         "viewAll": "View All On GitHub",
         "github": "GitHub"
     },
