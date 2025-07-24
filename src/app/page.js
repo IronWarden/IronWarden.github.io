@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai';
 import rishi from '../../public/rishi.JPG';
