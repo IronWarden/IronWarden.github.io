@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai';
 import rishi from '../../public/rishi.JPG';
@@ -13,7 +14,7 @@ export default function Home() {
                 <div className="relative mx-auto rounded-full mt-10 overflow-hidden md:h-80 md:w-80 h-40 w-40 ">
                     <Image src={rishi} alt="Rishi Gadhia's profile picture" fill={true} className="object-cover" priority />
                 </div>
-                <div className="text-3xl md:text-4xl lg:text-5xl flex justify-center gap-8 md:gap-12 lg:gap-16 py-3">
+                <div className="text-4xl md:text-5xl flex justify-center gap-8 md:gap-12 lg:gap-16 py-3">
                     <a href="https://github.com/IronWarden" target="_blank" className="p-2 rounded-full hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-current">
                         <AiFillGithub />
                     </a>
@@ -25,11 +26,11 @@ export default function Home() {
                     </a>
                 </div>
             </section>
-            <section className="my-12">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl text-secondary text-center">
+            <section className="my-10">
+                <h2 className="text-4xl md:text-5xl text-secondary text-center">
                     {keys.hero.name}
                 </h2>
-                <p className="text-sm md:text-lg lg:text-xl font-hack py-5">{keys.intro}</p>
+                <p className="text-lg md:text-xl lg:text-2xl py-5">{keys.intro}</p>
             </section>
             <Skills />
             <Projects />

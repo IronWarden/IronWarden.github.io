@@ -21,13 +21,16 @@
         "github": "GitHub"
     },
     "skills": {
-        "title": "Skills",
+        "title": "Skills/Technology",
         "javascript" : "As my primary language at work, I'm very comfortable with JavaScript and have built multiple projects with it.",
         "python": "I enjoy using Python for rapid prototyping, studying data structures, and handling various data pre-processing tasks.",
         "linux" : "I have ~1.5 years of linux experience on server and desktop, I am quite comfortable with the Linux ecosystem and find it enjoyable.",
         "go" : "I'm currently learning Go by building a backtesting engine and find it to be a very enjoyable and efficient language.",
         "react" : "I have built projects with both React and React Native and use it frequently in my professional work for UI development.",
-        "databases" : "I have experience working with both SQL and NoSQL databases and have used both types in various personal projects."
+        "databases" : "I have experience working with both SQL and NoSQL databases and have used both types in various personal projects.",
+        "java": "Java was my first OOP language and one of the first languages I've learned. In my University days I've used it to study DSA and build desktop applications with it.",
+        "c_cpp": "C was the first language I've learned. It was the foundation of my programming career, and although I don't use it much anymore it has a special place in my heart.",
+        "cloud": "I have experience with creating CI/CD pipelines, managing Docker containers, and have an AWS Cloud Practicioner certificate. I am rapidly learning more and more about cloud architecture as it is the future."
     }
 
 }

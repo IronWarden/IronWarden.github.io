@@ -29,16 +29,16 @@ const Projects = () => {
     ];
 
     return (
-        <section className="py-12">
+        <section className="py-10">
             <div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-secondary mb-8">{keys.projects.title}</h2>
+                <h2 className="text-4xl md:text-5xl text-center text-secondary mb-8">{keys.projects.title}</h2>
                 <div className="grid grid-cols-1 gap-12">
                     {projectsData.map((project, index) => (
                         <div key={index} className="card bg-base-200 shadow-xl">
                             <figure className="w-full">
                                 <Image src={project.image} alt={project.title} className="w-full h-full object-cover" />
                             </figure>
-                            <div className="card-body w-full text-sm md:text-lg xl:text-xl">
+                            <div className="card-body w-full text-md md:text-xl lg-text-2xl font-mono">
                                 <h3 className="card-title xl:text-2xl">{project.title}</h3>
                                 <p>{project.description}</p>
                                 <div className="card-actions justify-end">
@@ -49,7 +49,7 @@ const Projects = () => {
                     ))}
                 </div>
                 <div className="flex justify-center py-8">
-                    <a href="https://github.com/IronWarden?tab=repositories" className="btn btn-success" target="_blank">
+                    <a href="https://github.com/IronWarden?tab=repositories" className="btn btn-success font-mono" target="_blank">
                         {keys.projects.viewAll}
                     </a>
                 </div>

@@ -8,7 +8,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                hack: 'Hack',
+                sans: ['Fira Sans', 'sans-serif'],
+                mono: ['Hack', 'monospace'],
             },
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -17,7 +18,7 @@ module.exports = {
             },
         },
     },
-    plugins: [require('daisyui')],
+    plugins: [require('daisyui'), require('@tailwindcss/typography')],
     daisyui: {
         themes: [
             {

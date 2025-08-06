@@ -16,8 +16,8 @@ const NavbarAndDarkMode = () => {
         <nav className="navbar bg-base-100 ">
             <div className="flex-1">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link href="/" className="btn btn-ghost text-sm md:text-lg lg:text-xl">Home</Link></li>
-                    <li><Link href="/blog" className="btn btn-ghost text-sm md:text-lg lg:text-xl">Blog</Link></li>
+                    <li><Link href="/" className="btn btn-ghost text-lg md:text-xl lg:text-2xl">Home</Link></li>
+                    <li><Link href="/blog" className="btn btn-ghost text-lg md:text-xl lg:text-2xl">Blog</Link></li>
                 </ul>
             </div>
             <div className="flex-none">

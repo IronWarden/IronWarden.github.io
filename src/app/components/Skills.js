@@ -2,18 +2,20 @@ import React from 'react';
 import keys from '@/app/Keys/main.json';
 
 const SkillLevel = ({ level }) => {
-    const totalCircles = 10;
-    const filledCircles = Math.round(level / 10);
+    const getLevelText = (lvl) => {
+        if (lvl <= 25) return 'Amateur';
+        if (lvl <= 50) return 'Novice';
+        if (lvl <= 75) return 'Proficient';
+        return 'Experienced';
+    };
 
     return (
-        <div className="flex items-center">
-            {Array.from({ length: totalCircles }).map((_, index) => (
-                <div
-                    key={index}
-                    className={`h-4 w-4 rounded-full mx-1 ${index < filledCircles ? 'bg-primary' : 'bg-base-content'
-                        }`}
-                ></div>
-            ))}
+        <div className="flex flex-col items-center w-full">
+            <div className="flex justify-between w-full mb-1">
+                <span className="text-sm text-base-content">Novice</span>
+                <span className="text-sm text-base-content">Experienced</span>
+            </div>
+            <progress className="progress progress-primary w-full" value={level} max="100"></progress>
         </div>
     );
 };
@@ -56,21 +58,40 @@ const Skills = () => {
             description: keys.skills.react,
             level: 70,
         },
+        {
+            icon: 'bx bxl-java',
+            title: 'Java',
+            description: keys.skills.java,
+            level: 80,
+        },
+        {
+            icon: 'bx bxl-c-plus-plus',
+            title: 'C/C++',
+            description: keys.skills.c_cpp,
+            level: 65,
+        },
+        {
+            icon: 'bx bxs-cloud',
+            title: 'Cloud',
+            description: keys.skills.cloud,
+            level: 60,
+        },
     ];
 
     return (
-        <section className="py-12">
+        <section className="py-10">
             <div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl text-center text-secondary mb-8">{keys.skills.title}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <h2 className="text-4xl md:text-5xl text-center text-secondary mb-8">{keys.skills.title}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {skillsData.map((skill, index) => (
-                        <div key={index} className="card bg-base-200 shadow-xl">
-                            <div className="card-body">
-                                <div className="flex items-center mb-4">
-                                    <i className={`${skill.icon} text-4xl mr-4`}></i>
-                                    <h3 className="card-title text-sm md:text-lg xl:text-xl">{skill.title}</h3>
-                                </div>
-                                <p className='text-sm md:text-lg xl:text-xl'>{skill.description}</p>
+                        <div key={index} className="collapse collapse-arrow bg-base-200 shadow-xl self-start">
+                            <input type="checkbox" />
+                            <div className="collapse-title text-2xl font-bold flex items-center">
+                                <i className={`${skill.icon} text-4xl mr-2`}></i>
+                                {skill.title}
+                            </div>
+                            <div className="collapse-content">
+                                <p className="text-xl md:text-2xl mb-4">{skill.description}</p>
                                 <div className="mt-4">
                                     <SkillLevel level={skill.level} />
                                 </div>
