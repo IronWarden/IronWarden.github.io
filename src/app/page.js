@@ -30,7 +30,7 @@ export default function Home() {
                 <h2 className="text-4xl md:text-5xl text-secondary text-center">
                     {keys.hero.name}
                 </h2>
-                <p className="text-xl md:text-2xl py-5">{keys.intro}</p>
+                <p className="text-center text-xl md:text-2xl py-5">{keys.intro}</p>
             </section>
             <Skills />
             <Projects />
