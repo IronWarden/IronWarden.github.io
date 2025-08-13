@@ -2,7 +2,7 @@ import './globals.css'
 import NavbarAndDarkMode from './components/NavbarAndDarkMode';
 
 export const metadata = {
-    title: 'Rishi Gadhia \'s Portfolio',
+    title: 'Rishi Gadhia\'s Portfolio',
     description: '',
 }
 

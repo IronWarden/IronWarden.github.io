@@ -38,7 +38,7 @@ const Projects = () => {
                             <figure className="w-full">
                                 <Image src={project.image} alt={project.title} className="w-full h-full object-cover" />
                             </figure>
-                            <div className="card-body w-full text-md md:text-xl lg-text-2xl font-mono">
+                            <div className="card-body w-full text-md md:text-xl font-mono">
                                 <h3 className="card-title xl:text-2xl">{project.title}</h3>
                                 <p>{project.description}</p>
                                 <div className="card-actions justify-end">
