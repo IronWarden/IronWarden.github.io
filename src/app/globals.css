@@ -32,3 +32,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html[data-theme*="_light"] .dark-mode-icon {
+  display: none;
+}
+
+html[data-theme*="_dark"] .light-mode-icon {
+  display: none;
+}

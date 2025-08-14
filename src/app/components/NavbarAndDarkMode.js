@@ -2,15 +2,32 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { BsFillMoonStarsFill, BsSun } from 'react-icons/bs';
+import { useTheme } from 'next-themes';
 
 const NavbarAndDarkMode = () => {
-    const [darkMode, setDarkMode] = useState(false);
+    const { theme, setTheme } = useTheme();
+    const [showTooltip, setShowTooltip] = useState(false);
 
     useEffect(() => {
-        const theme = darkMode ? 'solarized_dark' : 'solarized_light';
-        document.documentElement.setAttribute('data-theme', theme);
-    }, [darkMode]);
+        const hasClickedThemePicker = localStorage.getItem('hasClickedThemePicker');
+        if (!hasClickedThemePicker) {
+            setShowTooltip(true);
+        }
+    }, []);
+
+    const isDarkMode = theme && theme.endsWith('_dark');
+
+    const toggleDarkMode = () => {
+        const newTheme = isDarkMode ? theme.replace('_dark', '_light') : theme.replace('_light', '_dark');
+        setTheme(newTheme);
+    };
+
+    const handleThemeChange = (newTheme) => {
+        const currentTheme = isDarkMode ? newTheme + '_dark' : newTheme + '_light';
+        setTheme(currentTheme);
+        localStorage.setItem('hasClickedThemePicker', 'true');
+        setShowTooltip(false);
+    };
 
     return (
         <nav className="navbar bg-base-100 ">
@@ -22,18 +39,21 @@ const NavbarAndDarkMode = () => {
                 </ul>
             </div>
             <div className="flex-none">
-                <label className="swap swap-rotate">
-                    <input
-                        id="darkModeToggle"
-                        name="darkModeToggle"
-                        type="checkbox"
-                        className="hidden"
-                        checked={darkMode}
-                        onChange={() => setDarkMode(!darkMode)}
-                    />
-                    <BsSun className="swap-on fill-current w-6 h-6 text-base-content" />
-                    <BsFillMoonStarsFill className="swap-off fill-current w-6 h-6 text-base-content" />
-                </label>
+                <div className={`dropdown dropdown-end ${showTooltip ? 'tooltip tooltip-open tooltip-bottom' : ''}`} data-tip="Click to change theme">
+                    <label tabIndex={0} className="btn btn-ghost m-1">
+                        <i className='bx bx-paint-roll text-2xl'></i>
+                    </label>
+                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-max z-50">
+                        <li><a onClick={() => handleThemeChange('solarized')}>Solarized</a></li>
+                        <li><a onClick={() => handleThemeChange('tokyonight')}>Tokyo Night</a></li>
+                        <li><a onClick={() => handleThemeChange('gruvbox')}>Gruvbox</a></li>
+                        <li><a onClick={() => handleThemeChange('nord')}>Nord</a></li>
+                    </ul>
+                </div>
+                <button className="btn btn-ghost m-1" onClick={toggleDarkMode}>
+                    <i className="bx bxs-moon fill-current text-2xl text-base-content dark-mode-icon"></i>
+                    <i className="bx bxs-sun fill-current text-2xl text-base-content light-mode-icon"></i>
+                </button>
             </div>
         </nav>
     );
