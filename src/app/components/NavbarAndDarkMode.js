@@ -39,7 +39,7 @@ const NavbarAndDarkMode = () => {
                 </ul>
             </div>
             <div className="flex-none">
-                <div className={`dropdown dropdown-end ${showTooltip ? 'tooltip tooltip-open tooltip-bottom' : ''}`} data-tip="Click to change theme">
+                <div className={`dropdown dropdown-end ${showTooltip ? 'tooltip tooltip-open tooltip-bottom' : ''}`} data-tip="Try Me!">
                     <label tabIndex={0} className="btn btn-ghost m-1">
                         <i className='bx bx-paint-roll text-2xl'></i>
                     </label>
