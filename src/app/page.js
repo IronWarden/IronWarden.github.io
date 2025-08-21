@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import { AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai';
 import rishi from '../../public/Rishi.jpg';
@@ -30,7 +29,7 @@ export default function Home() {
                 <h2 className="text-4xl md:text-5xl text-secondary text-center">
                     {keys.hero.name}
                 </h2>
-                <p className="text-center text-xl md:text-2xl py-5">{keys.intro}</p>
+                <p className="text-xl md:text-2xl py-5">{keys.intro}</p>
             </section>
             <Skills />
             <Projects />
