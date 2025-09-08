@@ -1,13 +1,16 @@
 import React from 'react';
+import Image from 'next/image';
+import resume from '../../../public/RishiResume-1.jpg';
 
 const ResumePage = () => {
     return (
         <div className="flex flex-col items-center justify-center">
             <div className="w-full max-w-5xl p-4">
-                <img
-                    src="/RishiResume-1.jpg"
+                <Image
+                    src={resume}
                     alt="Rishi Gadhia's Resume"
                     className="w-full h-auto border-2 rounded-lg shadow-lg"
+                    priority
                 />
             </div>
             <a
