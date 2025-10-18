@@ -35,7 +35,7 @@ const NavbarAndDarkMode = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link href="/" className="btn btn-ghost text-xl md:text-2xl">Home</Link></li>
                     <li><Link href="/blog" className="btn btn-ghost text-xl md:text-2xl">Blog</Link></li>
-                    <li><Link href="/resume" className="btn btn-ghost text-xl md:text-2xl">Resume</Link></li>
+                    <li><a href="/Rishi_Gadhia.pdf" className="btn btn-ghost text-xl md:text-2xl">Resume</a></li>
                 </ul>
             </div>
             <div className="flex-none">
