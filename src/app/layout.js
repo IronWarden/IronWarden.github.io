@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
             <head>
                 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
             </head>
-            <body className={`${firaSans.className} max-w-7xl mx-auto px-[6vw]`}>
+            <body className={`${firaSans.className} max-w-5xl mx-auto px-[6vw]`}>
                 <Providers>
                     <NavbarAndDarkMode />
                     {children}

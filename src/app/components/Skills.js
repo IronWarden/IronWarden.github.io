@@ -91,7 +91,7 @@ const Skills = () => {
                                 {skill.title}
                             </div>
                             <div className="collapse-content">
-                                <p className="text-xl md:text-2xl mb-4">{skill.description}</p>
+                                <p className="text-xl mb-4">{skill.description}</p>
                                 <div className="mt-4">
                                     <SkillLevel level={skill.level} />
                                 </div>
