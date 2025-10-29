@@ -40,3 +40,7 @@ html[data-theme*="_light"] .dark-mode-icon {
 html[data-theme*="_dark"] .light-mode-icon {
   display: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}

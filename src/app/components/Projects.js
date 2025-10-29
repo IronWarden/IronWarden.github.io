@@ -49,7 +49,7 @@ const Projects = () => {
                     ))}
                 </div>
                 <div className="flex justify-center py-8">
-                    <a href="https://github.com/IronWarden?tab=repositories" className="btn btn-success font-mono" target="_blank">
+                    <a href="https://github.com/IronWarden?tab=repositories" className="btn btn-success font-mono transition-all duration-300" target="_blank">
                         {keys.projects.viewAll}
                     </a>
                 </div>

@@ -84,7 +84,7 @@ const Skills = () => {
                 <h2 className="text-4xl md:text-5xl text-center text-secondary mb-8">{keys.skills.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {skillsData.map((skill, index) => (
-                        <div key={index} className="collapse collapse-arrow bg-base-200 shadow-xl self-start">
+                        <div key={index} className="collapse collapse-arrow bg-base-200 shadow-xl self-start hover:shadow-2xl hover:scale-105 transition-all duration-300">
                             <input type="checkbox" />
                             <div className="collapse-title text-2xl font-bold flex items-center">
                                 <i className={`${skill.icon} text-4xl mr-2`}></i>
