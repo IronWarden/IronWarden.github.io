@@ -44,3 +44,30 @@ html[data-theme*="_dark"] .light-mode-icon {
 html {
   scroll-behavior: smooth;
 }
+
+/* Blog full width on mobile */
+@media (max-width: 768px) {
+  .blog-page {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Override body padding for blog */
+  body:has(.blog-page) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Override navbar and footer padding for blog */
+  body:has(.blog-page) .navbar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body:has(.blog-page) .footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

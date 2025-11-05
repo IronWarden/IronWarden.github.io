@@ -12,6 +12,11 @@ const firaSans = Fira_Sans({
 export const metadata = {
     title: 'Rishi Gadhia\'s Portfolio',
     description: '',
+    icons: {
+        icon: '/icon.webp',
+        shortcut: '/icon.webp',
+        apple: '/icon.webp',
+    },
 }
 
 export default function RootLayout({ children }) {

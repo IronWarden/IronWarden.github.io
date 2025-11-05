@@ -11,7 +11,7 @@ export default function Home() {
         <main className="bg-base-100 text-base-content">
             <section>
                 <div className="relative mx-auto rounded-full mt-10 overflow-hidden lg:h-96 lg:w-96 md:h-80 md:w-80 h-60 w-60 ">
-                    <Image src={rishi} alt="Rishi Gadhia's profile picture" fill={true} className="object-cover" />
+                    <Image src={rishi} alt="Rishi Gadhia's profile picture" fill={true} className="object-cover" loading='eager' />
                 </div>
                 <div className="text-5xl md:text-6xl flex justify-center gap-8 md:gap-12 lg:gap-16 py-3">
                     <a href="https://github.com/IronWarden" target="_blank" className="p-2 rounded-full hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-current hover:scale-110 transition-all duration-300">
