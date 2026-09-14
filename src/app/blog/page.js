@@ -37,12 +37,13 @@ const Blog = async () => {
         <div className="blog-page">
             <div>
                 {posts.map(({ filename, contentHtml, title, date, author }) => (
-                    <div key={filename} className="mb-8 p-4 md:p-6 bg-base-200 rounded-lg shadow-xl">
-                        <h2 className="text-4xl md:text-3xl font-bold mb-2">{title}</h2>
-                        {date && <p className="text-accent mb-1 text-lg md:text-base">Date: {new Date(date).toDateString()}</p>}
-                        {author && <p className="text-accent mb-4 text-lg md:text-base">Author: {author}</p>}
-                        <div className="prose prose-lg md:prose-xl max-w-full text-xl" dangerouslySetInnerHTML={{ __html: contentHtml }} />
-                    </div>
+                    <article key={filename} className="py-10 border-b border-base-300 last:border-b-0">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-2">{title}</h2>
+                        <p className="opacity-50 mb-6 text-base">
+                            {[date && new Date(date).toDateString(), author].filter(Boolean).join(' · ')}
+                        </p>
+                        <div className="prose prose-base md:prose-lg max-w-full" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+                    </article>
                 ))}
             </div>
         </div>

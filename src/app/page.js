@@ -1,35 +1,40 @@
 import Image from 'next/image';
-import { AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai';
 import rishi from '../../public/Rishi.jpg';
 import React from 'react';
 import keys from '@/app/Keys/main.json';
+import Prompt from '@/app/components/Prompt.js';
 import Skills from '@/app/components/Skills.js';
 import Projects from '@/app/components/Projects.js';
 
+const socialLinks = [
+    { label: 'github', href: 'https://github.com/IronWarden' },
+    { label: 'linkedin', href: 'https://www.linkedin.com/in/rishi-gadhia-296843285/' },
+    { label: 'email', href: 'mailto:gadhiarishi@gmail.com' },
+];
+
 export default function Home() {
     return (
-        <main className="bg-base-100 text-base-content">
-            <section>
-                <div className="relative mx-auto rounded-full mt-10 overflow-hidden lg:h-96 lg:w-96 md:h-80 md:w-80 h-60 w-60 ">
-                    <Image src={rishi} alt="Rishi Gadhia's profile picture" fill={true} className="object-cover" loading='eager' />
+        <main className="text-base-content">
+            <section className="pt-16 pb-10">
+                <Prompt command={keys.hero.command} title={keys.about.title} />
+                <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
+                    <div className="relative shrink-0 rounded-box overflow-hidden h-32 w-32 md:h-40 md:w-40">
+                        <Image src={rishi} alt="Rishi Gadhia's profile picture" fill={true} className="object-cover" loading='eager' />
+                    </div>
+                    <div>
+                        <h1 className="text-3xl md:text-4xl font-bold">{keys.hero.name}</h1>
+                        <p className="opacity-60 mt-2 text-base md:text-lg">{keys.hero.role}</p>
+                        <p className="mt-4 text-base md:text-lg">
+                            {socialLinks.map(({ label, href }, i) => (
+                                <React.Fragment key={label}>
+                                    {i > 0 && <span className="opacity-30 mx-2" aria-hidden="true">·</span>}
+                                    <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline-offset-4">{label}</a>
+                                </React.Fragment>
+                            ))}
+                        </p>
+                    </div>
                 </div>
-                <div className="text-5xl md:text-6xl flex justify-center gap-8 md:gap-12 lg:gap-16 py-3">
-                    <a href="https://github.com/IronWarden" target="_blank" className="p-2 rounded-full hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-current hover:scale-110 transition-all duration-300">
-                        <AiFillGithub />
-                    </a>
-                    <a href="https://www.linkedin.com/in/rishi-gadhia-296843285/" target="_blank" className="p-2 rounded-full hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-current hover:scale-110 transition-all duration-300">
-                        <AiFillLinkedin />
-                    </a>
-                    <a href="mailto:gadhiarishi@gmail.com" target="_blank" className="p-2 rounded-full hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-current hover:scale-110 transition-all duration-300">
-                        <AiFillMail />
-                    </a>
-                </div>
-            </section>
-            <section className="my-10">
-                <h2 className="text-4xl md:text-5xl text-secondary text-center">
-                    {keys.hero.name}
-                </h2>
-                <p className="text-xl md:text-2xl py-5">{keys.intro}</p>
+                <p className="text-base md:text-lg leading-relaxed mt-8 opacity-90">{keys.intro}</p>
             </section>
             <Skills />
             <Projects />

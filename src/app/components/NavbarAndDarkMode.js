@@ -1,19 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
+const linkClass = 'opacity-70 hover:opacity-100 hover:text-primary transition-colors duration-150';
+
 const NavbarAndDarkMode = () => {
     const { theme, setTheme } = useTheme();
-    const [showTooltip, setShowTooltip] = useState(false);
-
-    useEffect(() => {
-        const hasClickedThemePicker = localStorage.getItem('hasClickedThemePicker');
-        if (!hasClickedThemePicker) {
-            setShowTooltip(true);
-        }
-    }, []);
 
     const isDarkMode = theme && theme.endsWith('_dark');
 
@@ -22,39 +16,17 @@ const NavbarAndDarkMode = () => {
         setTheme(newTheme);
     };
 
-    const handleThemeChange = (newTheme) => {
-        const currentTheme = isDarkMode ? newTheme + '_dark' : newTheme + '_light';
-        setTheme(currentTheme);
-        localStorage.setItem('hasClickedThemePicker', 'true');
-        setShowTooltip(false);
-    };
-
     return (
-        <nav className="navbar bg-base-100 ">
-            <div className="flex-1">
-                <ul className="menu menu-horizontal px-1">
-                    <li><Link href="/" className="btn btn-ghost text-xl md:text-2xl">Home</Link></li>
-                    <li><Link href="/blog" className="btn btn-ghost text-xl md:text-2xl">Blog</Link></li>
-                    <li><a href="/Rishi_Gadhia.pdf" className="btn btn-ghost text-xl md:text-2xl">Resume</a></li>
-                </ul>
-            </div>
-            <div className="flex-none">
-                <div className={`dropdown dropdown-end ${showTooltip ? 'tooltip tooltip-open tooltip-bottom' : ''}`} data-tip="Try Me!">
-                    <label tabIndex={0} className="btn btn-ghost m-1">
-                        <i className='bx bx-paint-roll text-2xl'></i>
-                    </label>
-                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-max z-50">
-                        <li><a onClick={() => handleThemeChange('solarized')}>Solarized</a></li>
-                        <li><a onClick={() => handleThemeChange('tokyonight')}>Tokyo Night</a></li>
-                        <li><a onClick={() => handleThemeChange('gruvbox')}>Gruvbox</a></li>
-                        <li><a onClick={() => handleThemeChange('nord')}>Nord</a></li>
-                    </ul>
-                </div>
-                <button className="btn btn-ghost m-1" onClick={toggleDarkMode}>
-                    <i className="bx bxs-moon fill-current text-2xl text-base-content dark-mode-icon"></i>
-                    <i className="bx bxs-sun fill-current text-2xl text-base-content light-mode-icon"></i>
-                </button>
-            </div>
+        <nav className="flex items-center justify-between py-5 text-base md:text-lg">
+            <ul className="flex gap-6 md:gap-8">
+                <li><Link href="/" className={linkClass}>home</Link></li>
+                <li><Link href="/blog" className={linkClass}>blog</Link></li>
+                <li><a href="/Rishi_Gadhia.pdf" className={linkClass}>resume</a></li>
+            </ul>
+            <button className={`${linkClass} p-1 leading-none`} onClick={toggleDarkMode} aria-label="Toggle dark mode">
+                <i className="bx bx-moon text-xl md:text-2xl dark-mode-icon"></i>
+                <i className="bx bx-sun text-xl md:text-2xl light-mode-icon"></i>
+            </button>
         </nav>
     );
 };

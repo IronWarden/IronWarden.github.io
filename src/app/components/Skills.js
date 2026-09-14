@@ -1,105 +1,47 @@
 import React from 'react';
 import keys from '@/app/Keys/main.json';
-
-const SkillLevel = ({ level }) => {
-    const getLevelText = (lvl) => {
-        if (lvl <= 25) return 'Amateur';
-        if (lvl <= 50) return 'Novice';
-        if (lvl <= 75) return 'Proficient';
-        return 'Experienced';
-    };
-
-    return (
-        <div className="flex flex-col items-center w-full">
-            <div className="flex justify-between w-full mb-1">
-                <span className="text-sm text-base-content">Novice</span>
-                <span className="text-sm text-base-content">Experienced</span>
-            </div>
-            <progress className="progress progress-primary w-full" value={level} max="100"></progress>
-        </div>
-    );
-};
+import Prompt from '@/app/components/Prompt.js';
 
 const Skills = () => {
     const skillsData = [
-        {
-            icon: 'bx bxl-javascript',
-            title: 'JavaScript',
-            description: keys.skills.javascript,
-            level: 90,
-        },
-        {
-            icon: 'bx bxl-python',
-            title: 'Python',
-            description: keys.skills.python,
-            level: 90,
-        },
-        {
-            icon: 'bx bxl-tux',
-            title: 'Linux',
-            description: keys.skills.linux,
-            level: 80,
-        },
-        {
-            icon: 'bx bxl-go-lang',
-            title: 'Go',
-            description: keys.skills.go,
-            level: 70,
-        },
-        {
-            icon: 'bx bx-data',
-            title: 'Databases',
-            description: keys.skills.databases,
-            level: 70,
-        },
-        {
-            icon: 'bx bxl-react',
-            title: 'React',
-            description: keys.skills.react,
-            level: 70,
-        },
-        {
-            icon: 'bx bxl-java',
-            title: 'Java',
-            description: keys.skills.java,
-            level: 80,
-        },
-        {
-            icon: 'bx bxl-c-plus-plus',
-            title: 'C/C++',
-            description: keys.skills.c_cpp,
-            level: 65,
-        },
-        {
-            icon: 'bx bxs-cloud',
-            title: 'Cloud',
-            description: keys.skills.cloud,
-            level: 60,
-        },
+        { key: 'go',         icon: 'bx bxl-go-lang' },
+        { key: 'javascript', icon: 'bx bxl-javascript' },
+        { key: 'linux',      icon: 'bx bxl-tux' },
+        { key: 'react',      icon: 'bx bxl-react' },
+        { key: 'databases',  icon: 'bx bx-data' },
+        { key: 'python',     icon: 'bx bxl-python' },
+        { key: 'cloud',      icon: 'bx bxs-cloud' },
+        { key: 'java',       icon: 'bx bxl-java' },
+        { key: 'c_cpp',      icon: 'bx bxl-c-plus-plus' },
     ];
 
     return (
         <section className="py-10">
-            <div>
-                <h2 className="text-4xl md:text-5xl text-center text-secondary mb-8">{keys.skills.title}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {skillsData.map((skill, index) => (
-                        <div key={index} className="collapse collapse-arrow bg-base-200 shadow-xl self-start hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                            <input type="checkbox" />
-                            <div className="collapse-title text-2xl font-bold flex items-center">
-                                <i className={`${skill.icon} text-4xl mr-2`}></i>
-                                {skill.title}
-                            </div>
-                            <div className="collapse-content">
-                                <p className="text-xl mb-4">{skill.description}</p>
-                                <div className="mt-4">
-                                    <SkillLevel level={skill.level} />
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <Prompt command={keys.skills.listing} title={keys.skills.title} />
+            <ul className="text-base md:text-lg">
+                {skillsData.map(({ key, icon }) => {
+                    const meta = keys.skills.meta[key];
+                    return (
+                        <li key={key} className="border-b border-base-300 last:border-b-0">
+                            <details className="group">
+                                <summary className="list-none [&::-webkit-details-marker]:hidden cursor-pointer grid grid-cols-[1fr_auto] sm:grid-cols-[11rem_4rem_1fr_auto] items-center gap-x-4 py-2.5 hover:text-primary transition-colors duration-150">
+                                    <span className="flex items-center gap-3 font-bold">
+                                        <i className={`${icon} text-xl opacity-50`}></i>
+                                        {key}
+                                    </span>
+                                    <span className="hidden sm:inline opacity-50">{meta.since}</span>
+                                    <span className="hidden sm:inline opacity-60 truncate">{meta.note}</span>
+                                    <span className="opacity-40 transition-transform duration-200 group-open:rotate-90">▸</span>
+                                </summary>
+                                <p className="leading-relaxed opacity-80 pb-4 sm:pl-[16rem] max-w-prose sm:max-w-none">
+                                    <span className="sm:hidden opacity-60">{meta.since} · {meta.note}<br /></span>
+                                    {keys.skills[key]}
+                                </p>
+                            </details>
+                        </li>
+                    );
+                })}
+            </ul>
         </section>
     );
 };
