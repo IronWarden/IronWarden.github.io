@@ -33,6 +33,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body {
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: oklch(var(--p) / 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { transition: none; }
+}
+
 html[data-theme*="_light"] .dark-mode-icon {
   display: none;
 }

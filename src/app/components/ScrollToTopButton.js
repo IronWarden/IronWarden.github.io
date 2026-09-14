@@ -31,7 +31,7 @@ const ScrollToTopButton = () => {
     return (
         <div className="fixed bottom-[30vh] right-[5vw] xl:right-[20vw] z-50 lg:hidden">
             {isVisible && (
-                <button onClick={scrollToTop} className="btn btn-circle btn-accent">
+                <button onClick={scrollToTop} className="btn btn-square btn-ghost border border-base-300 bg-base-100" aria-label="Scroll to top">
                     <i className='bx bx-up-arrow-alt text-2xl'></i>
                 </button>
             )}

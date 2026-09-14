@@ -4,24 +4,41 @@
         "developedBy": "Developed by Rishi Gadhia"
     },
     "hero": {
-        "name": "Rishi Gadhia"
+        "name": "Rishi Gadhia",
+        "role": "Solution Analyst @ Deloitte · Go · Linux · systems",
+        "command": "whoami"
     },
     "about": {
         "title": "About Me"
     },
     "projects": {
         "title": "Personal Projects",
+        "command": "ls projects/",
         "gameReview": "Game Review",
         "gameReviewDesc" : "A group project in creating a platform that users can sign up and leave reviews for video games. We made both a web and native Android application. I contributed by designing and implementing REST APIs, and integrating external APIs to enhance the application's features.",
         "sobel": "Parallelized Sobel Edge Detection",
         "sobelDesc" : "I participated in a group research project on multithreading edge detection algorithms. I contributed by writing prototypes and researching methods to run the Sobel edge detection algorithm in parallel.",
         "backtester": "Backtesting Engine",
-        "backtesterDesc": "An ongoing project on creating a TUI backtesting engine for trading and investing. I have built a prototype of a backtesting engine in Go, and created a duckDB database to store various asset data a user might want to backtest. Currently, I am extending the strategies that a user can run.",
+        "backtesterDesc": "An ongoing project on creating a GUI backtesting engine for trading and investing. The engine is written in Go and runs each portfolio concurrently across a worker pool, backed by a DuckDB database holding the asset data a user might want to backtest. I have since built a desktop interface on top of it with Wails, so runs, equity curves, SQL queries, and stock screening all live in one app, and strategies can be written in Lua without rebuilding the binary.",
+        "httpServer": "HTTP Server From Scratch",
+        "httpServerDesc": "A HTTP/1.0 server written in Go without net/http. I implemented the request line and header parsing, body handling, status codes, response writing, and a small router myself, with each connection served on its own goroutine. I am currently working a layer further down, writing my own TCP listener directly against Linux syscalls to sit underneath it. It is a project I took on to understand what the standard library is actually doing on my behalf.",
         "viewAll": "View All On GitHub",
         "github": "GitHub"
     },
     "skills": {
         "title": "Skills/Technology",
+        "listing": "ls -l skills/",
+        "meta": {
+            "go":         { "since": "2025", "note": "current focus" },
+            "javascript": { "since": "2023", "note": "daily at work" },
+            "linux":      { "since": "2025", "note": "server + desktop" },
+            "react":      { "since": "2023", "note": "web + native" },
+            "databases":  { "since": "2023", "note": "duckdb, pg, redis" },
+            "python":     { "since": "2021", "note": "prototyping, data" },
+            "cloud":      { "since": "2024", "note": "aws ccp, docker" },
+            "java":       { "since": "2020", "note": "university, dsa" },
+            "c_cpp":      { "since": "2019", "note": "where it started" }
+        },
         "javascript" : "As my primary language at work, I'm very comfortable with JavaScript and have built multiple projects with it.",
         "python": "I enjoy using Python for rapid prototyping, studying data structures, and handling various data pre-processing tasks.",
         "linux" : "I have ~1.5 years of linux experience on server and desktop, I am quite comfortable with the Linux ecosystem and find it enjoyable.",
