@@ -2,7 +2,6 @@ import Image from 'next/image';
 import rishi from '../../public/Rishi.jpg';
 import React from 'react';
 import keys from '@/app/Keys/main.json';
-import Prompt from '@/app/components/Prompt.js';
 import Skills from '@/app/components/Skills.js';
 import Projects from '@/app/components/Projects.js';
 
@@ -16,14 +15,13 @@ export default function Home() {
     return (
         <main className="text-base-content">
             <section className="pt-16 pb-10">
-                <Prompt command={keys.hero.command} title={keys.about.title} />
                 <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
                     <div className="relative shrink-0 rounded-box overflow-hidden h-32 w-32 md:h-40 md:w-40">
                         <Image src={rishi} alt="Rishi Gadhia's profile picture" fill={true} className="object-cover" loading='eager' />
                     </div>
                     <div>
                         <h1 className="text-3xl md:text-4xl font-bold">{keys.hero.name}</h1>
-                        <p className="opacity-60 mt-2 text-base md:text-lg">{keys.hero.role}</p>
+                        <p className="opacity-75 mt-2 text-base md:text-lg">{keys.hero.role}</p>
                         <p className="mt-4 text-base md:text-lg">
                             {socialLinks.map(({ label, href }, i) => (
                                 <React.Fragment key={label}>
@@ -34,7 +32,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                <p className="text-base md:text-lg leading-relaxed mt-8 opacity-90">{keys.intro}</p>
+                <p className="text-base md:text-lg leading-relaxed mt-8">{keys.intro}</p>
             </section>
             <Skills />
             <Projects />

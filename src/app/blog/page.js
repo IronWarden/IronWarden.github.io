@@ -39,7 +39,7 @@ const Blog = async () => {
                 {posts.map(({ filename, contentHtml, title, date, author }) => (
                     <article key={filename} className="py-10 border-b border-base-300 last:border-b-0">
                         <h2 className="text-2xl md:text-3xl font-bold mb-2">{title}</h2>
-                        <p className="opacity-50 mb-6 text-base">
+                        <p className="opacity-75 mb-6 text-base">
                             {[date && new Date(date).toDateString(), author].filter(Boolean).join(' · ')}
                         </p>
                         <div className="prose prose-base md:prose-lg max-w-full" dangerouslySetInnerHTML={{ __html: contentHtml }} />
