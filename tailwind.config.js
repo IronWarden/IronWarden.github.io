@@ -37,23 +37,6 @@ module.exports = {
         // terminal background, base-content its foreground, the rest its ANSI colors
         themes: [
             {
-                rosepine_dark: {
-                    ...shape,
-                    'primary': '#9ccfd8',
-                    'secondary': '#c4a7e7',
-                    'accent': '#ebbcba',
-                    'neutral': '#26233a',
-                    'base-100': '#191724',
-                    'base-200': '#1f1d2e',
-                    'base-300': '#403d52',
-                    'base-content': '#e0def4',
-                    'info': '#9ccfd8',
-                    'success': '#31748f',
-                    'warning': '#f6c177',
-                    'error': '#eb6f92',
-                },
-            },
-            {
                 rosepine_light: {
                     ...shape,
                     'primary': '#286983',
@@ -68,6 +51,23 @@ module.exports = {
                     'success': '#286983',
                     'warning': '#ea9d34',
                     'error': '#b4637a',
+                },
+            },
+            {
+                rosepine_dark: {
+                    ...shape,
+                    'primary': '#9ccfd8',
+                    'secondary': '#c4a7e7',
+                    'accent': '#ebbcba',
+                    'neutral': '#26233a',
+                    'base-100': '#191724',
+                    'base-200': '#1f1d2e',
+                    'base-300': '#403d52',
+                    'base-content': '#e0def4',
+                    'info': '#9ccfd8',
+                    'success': '#31748f',
+                    'warning': '#f6c177',
+                    'error': '#eb6f92',
                 },
             },
             {
