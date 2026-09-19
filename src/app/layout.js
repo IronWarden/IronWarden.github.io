@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
                     {children}
                     <ScrollToTopButton />
                     <footer className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 py-8 mt-10 border-t border-base-300 text-sm md:text-base">
-                        <p className="opacity-50">© 2025 Rishi Gadhia</p>
+                        <p className="opacity-75">© 2025 Rishi Gadhia</p>
                         <SchemePicker />
                     </footer>
                 </Providers>

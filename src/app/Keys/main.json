@@ -1,23 +1,20 @@
 {
-    "intro": "I work full-time as a Solution Analyst at Deloitte, modernizing legacy systems to optimize client operations. Aside from that, I spend a considerable amount of my spare time challenging myself with new technologies and expanding my skillset. I enjoy solving difficult problems and strive to make an impact on the world around me.", 
+    "intro": "I work full-time as a Solution Analyst at Deloitte, modernizing legacy systems to optimize client operations. Aside from that, I spend a considerable amount of my spare time challenging myself with new technologies and expanding my skillset. I enjoy solving difficult problems and strive to make an impact on the world around me.",
     "nav": {
         "developedBy": "Developed by Rishi Gadhia"
     },
     "hero": {
         "name": "Rishi Gadhia",
-        "role": "Solution Analyst @ Deloitte · Go · Linux · systems",
-        "command": "whoami"
-    },
-    "about": {
-        "title": "About Me"
+        "role": "Software Engineer @ Deloitte"
     },
     "projects": {
         "title": "Personal Projects",
-        "command": "ls projects/",
+        "ongoing": "Ongoing",
+        "completed": "Completed",
         "gameReview": "Game Review",
-        "gameReviewDesc" : "A group project in creating a platform that users can sign up and leave reviews for video games. We made both a web and native Android application. I contributed by designing and implementing REST APIs, and integrating external APIs to enhance the application's features.",
+        "gameReviewDesc": "A group project in creating a platform that users can sign up and leave reviews for video games. We made both a web and native Android application. I contributed by designing and implementing REST APIs, and integrating external APIs to enhance the application's features.",
         "sobel": "Parallelized Sobel Edge Detection",
-        "sobelDesc" : "I participated in a group research project on multithreading edge detection algorithms. I contributed by writing prototypes and researching methods to run the Sobel edge detection algorithm in parallel.",
+        "sobelDesc": "I participated in a group research project on multithreading edge detection algorithms. I contributed by writing prototypes and researching methods to run the Sobel edge detection algorithm in parallel.",
         "backtester": "Backtesting Engine",
         "backtesterDesc": "An ongoing project on creating a GUI backtesting engine for trading and investing. The engine is written in Go and runs each portfolio concurrently across a worker pool, backed by a DuckDB database holding the asset data a user might want to backtest. I have since built a desktop interface on top of it with Wails, so runs, equity curves, SQL queries, and stock screening all live in one app, and strategies can be written in Lua without rebuilding the binary.",
         "httpServer": "HTTP Server From Scratch",
@@ -26,28 +23,58 @@
         "github": "GitHub"
     },
     "skills": {
-        "title": "Skills/Technology",
-        "listing": "ls -l skills/",
-        "meta": {
-            "go":         { "since": "2025", "note": "current focus" },
-            "javascript": { "since": "2023", "note": "daily at work" },
-            "linux":      { "since": "2025", "note": "server + desktop" },
-            "react":      { "since": "2023", "note": "web + native" },
-            "databases":  { "since": "2023", "note": "duckdb, pg, redis" },
-            "python":     { "since": "2021", "note": "prototyping, data" },
-            "cloud":      { "since": "2024", "note": "aws ccp, docker" },
-            "java":       { "since": "2020", "note": "university, dsa" },
-            "c_cpp":      { "since": "2019", "note": "where it started" }
-        },
-        "javascript" : "As my primary language at work, I'm very comfortable with JavaScript and have built multiple projects with it.",
-        "python": "I enjoy using Python for rapid prototyping, studying data structures, and handling various data pre-processing tasks.",
-        "linux" : "I have ~1.5 years of linux experience on server and desktop, I am quite comfortable with the Linux ecosystem and find it enjoyable.",
-        "go" : "I'm currently learning Go by building a backtesting engine and find it to be a very enjoyable and efficient language.",
-        "react" : "I have built projects with both React and React Native and use it frequently in my professional work for UI development.",
-        "databases" : "I have experience working with various SQL and NoSQL databases such as SQLite3, DuckDB, PostgreSQL, MongoDB, and Redis.",
-        "java": "Java was my first OOP language and one of the first languages I've learned. In my University days, I've used it to study DSA and build desktop applications with it.",
-        "c_cpp": "C was the first language I've learned. It was the foundation of my programming career, and although I don't use it much anymore it has a special place in my heart.",
-        "cloud": "I have experience with creating CI/CD pipelines, managing Docker containers, and have an AWS Cloud Practicioner certificate. I am rapidly learning more and more about cloud architecture as it is the future."
+        "title": "Skills",
+        "groups": {
+            "languages": [
+                "go",
+                "javascript",
+                "typescript",
+                "python",
+                "java",
+                "c/c++"
+            ],
+            "frameworks": [
+                "react",
+                "next.js",
+                "spring",
+                "tailwind"
+            ],
+            "databases": [
+                "postgresql",
+                "oracledb",
+                "duckdb",
+                "mongodb"
+            ],
+            "tools": [
+                "linux",
+                "docker",
+                "git",
+                "tmux"
+            ]
+        }
+    },
+    "funFacts": {
+        "title": "Fun Facts",
+        "intro": "The stuff that doesn't fit on a resume.",
+        "list": [
+            {
+                "label": "reading",
+                "text": "I enjoy reading as a pastime, some of my favorite books include: The Black Swan by Nassim Nicholas Taleb, A History of the World in 6 Glasses by Tom Standage, and Six Easy Pieces by Richard Feynman."
+            },
+            {
+                "label": "piano",
+                "text": "I love to play and listen to piano pieces, I particularly like classical pieces and composers like Liszt and Chopin."
+            },
+            {
+                "label": "learning",
+                "text": "I spend a lot of my spare time experimenting with new technologies and ideas, drawing inspiration from a wide array of non-fiction and fictional works."
+            },
+            {
+                "label": "chess",
+                "text": "I play a lot of chess, mostly online these days. You can find me at",
+                "link": "https://www.chess.com/member/charizardliver",
+                "linkText": "chess.com/charizardliver"
+            }
+        ]
     }
-
 }

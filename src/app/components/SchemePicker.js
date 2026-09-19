@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
-const schemes = ['solarized', 'tokyonight', 'gruvbox', 'nord'];
+const schemes = ['rosepine', 'tokyonight', 'gruvbox', 'nord'];
 
 // Small footer control for the color scheme; light/dark stays in the navbar
 const SchemePicker = () => {
@@ -23,7 +23,7 @@ const SchemePicker = () => {
                     <button
                         onClick={() => setTheme(scheme + variant)}
                         aria-pressed={current === scheme}
-                        className={current === scheme ? 'text-primary' : 'opacity-60 hover:opacity-100 transition-opacity duration-150'}
+                        className={current === scheme ? 'text-primary' : 'opacity-75 hover:opacity-100 transition-opacity duration-150'}
                     >
                         {scheme}
                     </button>
