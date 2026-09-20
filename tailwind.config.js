@@ -31,7 +31,7 @@ module.exports = {
             },
         },
     },
-    plugins: [require('daisyui'), require('@tailwindcss/typography')],
+    plugins: [require('daisyui')],
     daisyui: {
         // Palettes follow each colorscheme's terminal definition: base-100 is the
         // terminal background, base-content its foreground, the rest its ANSI colors

@@ -1,6 +1,5 @@
 import './globals.css'
 import NavbarAndDarkMode from './components/NavbarAndDarkMode';
-import ScrollToTopButton from './components/ScrollToTopButton';
 import SchemePicker from './components/SchemePicker';
 import { Providers } from './providers';
 
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
                 <Providers>
                     <NavbarAndDarkMode />
                     {children}
-                    <ScrollToTopButton />
                     <footer className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 py-8 mt-10 border-t border-base-300 text-sm md:text-base">
                         <p className="opacity-75">© 2025 Rishi Gadhia</p>
                         <SchemePicker />
