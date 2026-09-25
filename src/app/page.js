@@ -8,6 +8,7 @@ import Projects from '@/app/components/Projects.js';
 const socialLinks = [
     { label: 'github', href: 'https://github.com/IronWarden' },
     { label: 'linkedin', href: 'https://www.linkedin.com/in/rishi-gadhia-296843285/' },
+    { label: 'substack', href: keys.nav.substack },
     { label: 'email', href: 'mailto:gadhiarishi@gmail.com' },
 ];
 
@@ -26,7 +27,7 @@ export default function Home() {
                             {socialLinks.map(({ label, href }, i) => (
                                 <React.Fragment key={label}>
                                     {i > 0 && <span className="opacity-30 mx-2" aria-hidden="true">·</span>}
-                                    <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline-offset-4">{label}</a>
+                                    <a href={href} className="text-primary hover:underline underline-offset-4">{label}</a>
                                 </React.Fragment>
                             ))}
                         </p>

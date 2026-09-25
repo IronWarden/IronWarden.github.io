@@ -15,7 +15,7 @@ const FunFacts = () => (
                         {link && (
                             <>
                                 {text && ' '}
-                                <a href={link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline-offset-4">
+                                <a href={link} className="text-primary hover:underline underline-offset-4">
                                     {linkText ?? link}
                                 </a>
                             </>

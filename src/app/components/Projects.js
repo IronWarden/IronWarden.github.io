@@ -58,7 +58,7 @@ const Projects = () => {
                             <article key={project.link} className="grid grid-cols-1 md:grid-cols-[1fr_22rem] gap-6 md:gap-10 py-8 border-t border-base-300 first:border-t-0 first:pt-0">
                                 <div className="text-base md:text-lg leading-relaxed">
                                     <h4 className="text-lg md:text-xl font-bold">
-                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline-offset-4">
+                                        <a href={project.link} className="text-primary hover:underline underline-offset-4">
                                             {project.title}
                                         </a>
                                     </h4>
@@ -73,7 +73,7 @@ const Projects = () => {
                     </div>
                 </div>
             ))}
-            <a href="https://github.com/IronWarden?tab=repositories" className="inline-block mt-4 text-base md:text-lg text-primary hover:underline underline-offset-4" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/IronWarden?tab=repositories" className="inline-block mt-4 text-base md:text-lg text-primary hover:underline underline-offset-4">
                 {keys.projects.viewAll} →
             </a>
         </section>
